@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-exabase"
+version = "0.1.0"
+description = "LangChain integrations for Exabase memory"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Exabase" }]
+dependencies = [
+  "requests>=2.32",
+  "langchain-core>=0.3",
+  "langchain>=0.3",
+  "langgraph>=0.3",
+  "langmem>=0.0.30",
+]
+
+[project.urls]
+Homepage = "https://exabase.io"
+Source = "https://exabase.io/docs/api-reference"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_exabase"]
+
+[tool.ruff]
+line-length = 100
