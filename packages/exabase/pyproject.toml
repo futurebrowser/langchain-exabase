@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exabase"
+version = "0.1.0"
+description = "Reusable Exabase API client"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.32",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["exabase"]
+
+[tool.ruff]
+line-length = 100

@@ -7,7 +7,7 @@ from langchain_core.tools import BaseTool, tool
 from langchain_core.tools.base import BaseToolkit
 from pydantic import ConfigDict, Field
 
-from .client import Exabase
+from exabase import Exabase
 
 
 class ExabaseToolkit(BaseToolkit):

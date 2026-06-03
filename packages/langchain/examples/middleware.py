@@ -2,7 +2,8 @@ import os
 
 from langchain.agents import create_agent
 
-from langchain_exabase import Exabase, exabase_memory_middleware
+from exabase import Exabase
+from exabase_langchain import exabase_memory_middleware
 
 EXABASE_API_KEY = os.environ["EXABASE_API_KEY"]
 EXABASE_BASE_ID = os.getenv("EXABASE_BASE_ID")

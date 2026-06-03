@@ -6,7 +6,7 @@ from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 from pydantic import ConfigDict, Field
 
-from .client import Exabase
+from exabase import Exabase
 
 
 class ExabaseRetriever(BaseRetriever):

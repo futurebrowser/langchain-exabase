@@ -2,6 +2,13 @@ version = 1
 revision = 3
 requires-python = ">=3.10"
 
+[manifest]
+members = [
+    "exabase",
+    "exabase-langchain",
+    "exabase-workspace",
+]
+
 [[package]]
 name = "annotated-types"
 version = "0.7.0"
@@ -196,6 +203,51 @@ sdist = { url = "https://files.pythonhosted.org/packages/08/c5/2d097e5a4816b1518
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7a/7c/a1b120141a300853d82291faf0ba1a95133fa390e4b7d773647b69c8c0f4/dydantic-0.0.8-py3-none-any.whl", hash = "sha256:cd0a991f523bd8632699872f1c0c4278415dd04783e36adec5428defa0afb721", size = 8637, upload-time = "2025-01-29T20:36:12.217Z" },
 ]
+
+[[package]]
+name = "exabase"
+version = "0.1.0"
+source = { editable = "packages/exabase" }
+dependencies = [
+    { name = "requests" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "requests", specifier = ">=2.32" }]
+
+[[package]]
+name = "exabase-langchain"
+version = "0.1.1"
+source = { editable = "packages/langchain" }
+dependencies = [
+    { name = "langchain" },
+    { name = "langchain-core" },
+    { name = "langgraph" },
+    { name = "langmem" },
+    { name = "requests" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "exabase" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "langchain", specifier = ">=0.3" },
+    { name = "langchain-core", specifier = ">=0.3" },
+    { name = "langgraph", specifier = ">=0.3" },
+    { name = "langmem", specifier = ">=0.0.30" },
+    { name = "requests", specifier = ">=2.32" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "exabase", editable = "packages/exabase" }]
+
+[[package]]
+name = "exabase-workspace"
+version = "0.1.0"
+source = { virtual = "." }
 
 [[package]]
 name = "exceptiongroup"
@@ -425,27 +477,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/59/de/679a53472c25860837e32c0442c962fa86e95317a36460e2c9d5c91b17c2/langchain_core-1.4.0.tar.gz", hash = "sha256:1dc341eed802ed9c117c0df3923c991e5e9e226571e5725c194eeb5bd93d1a7f", size = 920260, upload-time = "2026-05-11T18:42:35.919Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0f/1a/86c38c27b81913a1c6c12448cab55defb5a1097c7dc9a4cea83f55477a2d/langchain_core-1.4.0-py3-none-any.whl", hash = "sha256:23cbbdb46e38ddd1dd5247e6167e96013eae74bea4c5949c550809970a9e565c", size = 548120, upload-time = "2026-05-11T18:42:33.992Z" },
-]
-
-[[package]]
-name = "langchain-exabase"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "langchain" },
-    { name = "langchain-core" },
-    { name = "langgraph" },
-    { name = "langmem" },
-    { name = "requests" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "langchain", specifier = ">=0.3" },
-    { name = "langchain-core", specifier = ">=0.3" },
-    { name = "langgraph", specifier = ">=0.3" },
-    { name = "langmem", specifier = ">=0.0.30" },
-    { name = "requests", specifier = ">=2.32" },
 ]
 
 [[package]]

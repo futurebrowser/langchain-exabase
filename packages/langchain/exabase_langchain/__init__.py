@@ -1,4 +1,4 @@
-from .client import Exabase, ExabaseError
+from exabase import Exabase, ExabaseError
 from .middleware import exabase_memory_middleware
 from .retriever import ExabaseRetriever
 from .store import ExabaseStore
@@ -14,4 +14,3 @@ __all__ = [
 ]
 
 __version__ = "0.1.0"
-

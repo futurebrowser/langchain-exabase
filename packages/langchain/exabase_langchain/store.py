@@ -15,7 +15,7 @@ from langgraph.store.base import (
     SearchOp,
 )
 
-from .client import Exabase
+from exabase import Exabase
 
 
 def _namespace_text(namespace: Iterable[str]) -> str:

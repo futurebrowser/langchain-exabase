@@ -3,7 +3,8 @@ import os
 from langchain.agents import create_agent
 from langmem import create_manage_memory_tool, create_search_memory_tool
 
-from langchain_exabase import Exabase, ExabaseStore
+from exabase import Exabase
+from exabase_langchain import ExabaseStore
 
 EXABASE_API_KEY = os.environ["EXABASE_API_KEY"]
 EXABASE_BASE_ID = os.getenv("EXABASE_BASE_ID")

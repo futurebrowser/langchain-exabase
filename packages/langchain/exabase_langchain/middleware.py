@@ -4,7 +4,7 @@ from typing import Any
 
 from langchain.agents.middleware import ModelRequest, dynamic_prompt
 
-from .client import Exabase
+from exabase import Exabase
 from .retriever import ExabaseRetriever
 
 
