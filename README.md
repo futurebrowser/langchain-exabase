@@ -1,4 +1,4 @@
-# langchain-exabase
+# Exabase M-1 Memory Provider for LangChain
 
 Exabase M-1 memory-provider integration for LangChain.
 
