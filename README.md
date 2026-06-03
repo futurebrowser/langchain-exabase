@@ -24,6 +24,15 @@ recorded QA score, and using a small model. Read the research paper
 Exabase Memory powers memory in production apps like
 [Fabric](https://fabric.so), used by 300,000+ people.
 
+## What this integration provides
+
+- `ExabaseToolkit`: tools for searching, adding, updating, and removing Exabase
+  memories
+- `ExabaseStore`: a lightweight LangGraph/LangMem-compatible store adapter
+- `ExabaseRetriever`: LangChain retriever backed by Exabase memory search
+- `exabase_memory_middleware`: dynamic prompt middleware that injects relevant
+  memories into conversations
+
 ## Install
 
 ```bash
@@ -35,15 +44,6 @@ For local development:
 ```bash
 uv sync
 ```
-
-## What it provides
-
-- `ExabaseToolkit`: tools for searching, adding, updating, and removing Exabase
-  memories
-- `ExabaseStore`: a lightweight LangGraph/LangMem-compatible store adapter
-- `ExabaseRetriever`: LangChain retriever backed by Exabase memory search
-- `exabase_memory_middleware`: dynamic prompt middleware that injects relevant
-  memories into conversations
 
 ## Examples
 
