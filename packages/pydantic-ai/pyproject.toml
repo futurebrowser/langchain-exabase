@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exabase-pydantic-ai"
+version = "0.1.0"
+description = "Pydantic AI integrations for Exabase memory"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Exabase" }]
+dependencies = [
+  "pydantic-ai>=0.0.14",
+  "requests>=2.32",
+]
+
+[project.urls]
+Homepage = "https://exabase.io"
+Source = "https://exabase.io/docs/api-reference"
+
+[tool.hatch.build.targets.sdist.force-include]
+"../exabase/exabase" = "exabase"
+
+[tool.hatch.build.targets.wheel]
+packages = ["exabase_pydantic_ai", "exabase"]
+
+[dependency-groups]
+dev = [
+  "exabase",
+]
+
+[tool.uv.sources]
+exabase = { workspace = true }
+
+[tool.ruff]
+line-length = 100
